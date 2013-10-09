@@ -1,0 +1,396 @@
+@import "var";
+@import "normalize";
+@import "grid";
+@import "typography";
+
+
+
+/* ==========================================================================
+   Author's custom styles 16 - 48 - 32
+   ========================================================================== */
+
+/* ==========================================================================
+   Home & General
+   ========================================================================== */
+
+html{
+  background: #EBEBEB;
+}
+
+.full {
+    width: 100%;
+    height: auto;
+}
+.attachment-frontBlog.wp-post-image {
+width: 100%;
+height: auto;
+}
+   
+.main{
+width: 68.777%;
+float: left;
+margin-left: 3.7%;
+margin-right: 2.4%;
+  .clearfix();  
+}
+
+.sb {
+width: 21.5%;
+float: left;
+}
+
+.hiddenTitle{
+  display: none;
+}
+
+header {
+height: 8.4em;
+background: #FFF;
+border-bottom: 5px solid @yellow;
+}
+
+h1{
+    background: url('../img/logo.png');
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    height: 2.5em;
+    float: left;
+    width: 7em;
+    margin-left: .85em;
+}
+
+h1 a {
+display: block;
+border: none;
+height: 100%;
+color: rgba(0, 0, 0, 0);
+
+&:hover{
+    background: none;
+}
+}
+
+.first {
+    float: right;
+    margin-top: 3.2em;
+    margin-right: 2.2em;
+    .clearfix();
+}
+.first li {
+    display: inline-block;
+}
+.first li a {
+    padding: 1em;
+    border: none;
+    color: @black;
+    font-size: 1.2em;
+}
+
+.slider div {
+position: absolute;
+bottom: 2em;
+right: 2em;
+width: 47.8%;
+background: rgba(255, 255, 255, 0.75);
+padding: 0 1% 0 1%;
+}
+
+.slider h3 {
+    margin-top: .4em;
+    margin-bottom: .2em;
+    color: #1B1B1B;
+}
+
+.slider:hover div {
+background: rgba(0, 0, 0, 0.75);
+border: 5px solid @yellow;
+}
+
+.slider:hover h3, .slider:hover p {
+color: #E4E4E4;
+}
+
+.gallerie li {
+float: left;
+margin-right: 1.7%;
+width: 32.2%;
+} 
+
+.gallerie li:last-child {
+margin-right: 0;
+}
+
+.attachment-galAcc {
+width: 100%;
+height: auto;
+}
+
+.picAcc{
+height: 24em;
+padding: 1em 1.5em 1em 1.5em;
+background: #FFF;
+margin-top: 2em;
+box-shadow: 2px 2px 5px #ADADAD;
+}
+.picAcc h2 {
+    margin-top: 0;
+margin-bottom: .2em;
+padding-bottom: .35em;
+border-bottom: 2px solid @yellow;
+}
+
+.agAcc, .social, .search {
+padding: 1em 1em 1em 1em;
+background: #FFF;
+margin-top: 2em;
+box-shadow: 2px 2px 5px #ADADAD;
+}
+
+.social{
+  margin-bottom: 2em;
+}
+
+
+
+.agenda h3{
+  margin-top: 0;
+}
+
+footer{
+  .clearfix();
+  clear: both;
+  background: #FFF;
+  border-top: 3px solid @yellow;
+  padding-top: 1em;
+}
+
+/* ==========================================================================
+   Page blog
+   ========================================================================== */
+
+.blogContainer {
+  padding: 1em 1.5em 1em 1.5em;
+  background: #FFF;
+  margin-top: 2em;
+  box-shadow: 2px 2px 5px #ADADAD;
+  margin-bottom: 2em;
+
+  h3{
+    margin-top: 0
+  }
+}
+
+.meta {
+margin-bottom: 1.4em;
+}
+
+.blogContainer .attachment-galAcc {
+width: auto;
+height: auto;
+float: left;
+padding: 0 0em 0 0;
+margin-right: 1.5em;
+border: 4px solid #1B1B1B;
+}
+
+article{
+  .clearfix();
+}
+
+.blogContainer a{
+  color: black;
+  border: none;
+}
+
+.blogContainer a:hover img{
+border: 4px solid @yellow;
+}
+
+
+.screen-reader-text {
+display: none;
+}
+
+.search input[type="text"] {
+width: 96%;
+height: 2.4em;
+padding-left: .4em;
+margin-bottom: 1em;
+}
+
+.search input[type="submit"] {
+width: 100%;
+height: 2.4em;
+font-weight: 600;
+background: @yellow;
+border: none;
+font-size: 1.2em;
+color: #FFF;
+letter-spacing: .05em;
+cursor: pointer;
+
+&:hover{
+  background: @blue;
+}
+}
+/* ==========================================================================
+   Slider
+   ========================================================================== */
+
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  border: 0;
+  }
+
+.slider li {
+width: 100%;
+height: auto;
+margin: 0;
+padding: 0;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width: 1240px){ 
+
+
+
+}
+
+@media only screen and (max-width: 1000px){
+
+
+}
+
+@media only screen and (max-width: 960px){
+  .js #nav {
+    position: relative;
+  }
+  .js #nav.closed {
+    max-height: none;
+    display: none;
+  }
+  #nav-toggle {
+    display: none;
+  }
+
+
+#nav-toggle {
+display: block;
+width: 100%;
+margin: 0 auto;
+text-align: center;
+color: #333;
+text-decoration: none;
+background-color: lightgrey;
+padding: .6em 0 .6em 0;
+font-weight: 700;
+font-size: 1.2em;
+position: absolute;
+width: 10%;
+right: 2em;
+border: none;
+}
+
+
+
+    }
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

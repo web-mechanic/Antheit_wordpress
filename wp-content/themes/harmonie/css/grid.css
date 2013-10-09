@@ -1,0 +1,14 @@
+body {
+  font-size: 95%;
+  *zoom: 1;
+  max-width: 1400px;
+  width: 100%;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
