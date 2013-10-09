@@ -12,8 +12,8 @@ a.pauseControls&&d.hover(function(){clearInterval(p)},function(){m()})}}if("unde
 $(".slider").responsiveSlides(
 {
   auto: true,             // Boolean: Animate automatically, true or false
-  speed: 700,            // Integer: Speed of the transition, in milliseconds
-  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+  speed: 900,            // Integer: Speed of the transition, in milliseconds
+  timeout: 8500,          // Integer: Time between slide transitions, in milliseconds
   pager: false,           // Boolean: Show pager, true or false
   nav: false,             // Boolean: Show navigation, true or false
   random: true,          // Boolean: Randomize the order of the slides, true or false

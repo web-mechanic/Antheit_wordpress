@@ -267,17 +267,28 @@ input {
   font-family: 'Raleway', sans-serif;
 }
 /* ==========================================================================
-   Author's custom styles 16 - 48 - 32
-   ========================================================================== */
+	 Author's custom styles 16 - 48 - 32
+	 ========================================================================== */
 /* ==========================================================================
-   Home & General
-   ========================================================================== */
+	 Home & General
+	 ========================================================================== */
 html {
   background: #EBEBEB;
 }
 .full {
   width: 100%;
   height: auto;
+}
+.button {
+  padding: .5em .5em;
+  background: #f6a313;
+  color: #FFF !important;
+  float: right;
+  border-bottom: none;
+}
+.button:hover {
+  background: #006770;
+  border-bottom: none;
 }
 .attachment-frontBlog.wp-post-image {
   width: 100%;
@@ -399,7 +410,8 @@ h1 a:hover {
 }
 .agAcc,
 .social,
-.search {
+.search,
+.lastArticles {
   padding: 1em 1em 1em 1em;
   background: #FFF;
   margin-top: 2em;
@@ -427,16 +439,40 @@ footer:after {
   clear: both;
 }
 /* ==========================================================================
-   Page blog
-   ========================================================================== */
-.blogContainer {
+	 Page blog
+	 ========================================================================== */
+.blogContainer,
+.apContainer,
+.agContainer,
+.agDetailContainer {
   padding: 1em 1.5em 1em 1.5em;
   background: #FFF;
   margin-top: 2em;
   box-shadow: 2px 2px 5px #ADADAD;
   margin-bottom: 2em;
+  *zoom: 1;
 }
-.blogContainer h3 {
+.blogContainer:before,
+.apContainer:before,
+.agContainer:before,
+.agDetailContainer:before,
+.blogContainer:after,
+.apContainer:after,
+.agContainer:after,
+.agDetailContainer:after {
+  content: "";
+  display: table;
+}
+.blogContainer:after,
+.apContainer:after,
+.agContainer:after,
+.agDetailContainer:after {
+  clear: both;
+}
+.blogContainer h3,
+.apContainer h3,
+.agContainer h3,
+.agDetailContainer h3 {
   margin-top: 0;
 }
 .meta {
@@ -491,9 +527,53 @@ article:after {
 .search input[type="submit"]:hover {
   background: #006770;
 }
+.attachment-singleBlog {
+  width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+}
+article {
+  padding-bottom: 1em;
+  border-bottom: 1px dashed lightgrey;
+}
 /* ==========================================================================
-   Slider
-   ========================================================================== */
+	A propos
+	 ========================================================================== */
+.ochPic {
+  margin-bottom: 1em;
+}
+.chefPic {
+  float: left;
+  padding: 0 1em 0 0;
+}
+/* ==========================================================================
+	 Agenda
+	 ========================================================================== */
+.agContainer li {
+  height: 128px;
+  width: 100%;
+}
+.attachment-pageAgenda {
+  float: left;
+  padding: 0 1em 0 0;
+}
+.agContainer h3 {
+  margin-top: 2em;
+}
+.baseInfo {
+  float: left;
+}
+.moreAg {
+  margin-top: 3.5em;
+  margin-right: 1em;
+}
+.agContainer li:hover,
+.agenda li:hover {
+  box-shadow: 2px 2px 5px #ADADAD;
+}
+/* ==========================================================================
+	 Slider
+	 ========================================================================== */
 .rslides {
   position: relative;
   list-style: none;
@@ -526,8 +606,8 @@ article:after {
   padding: 0;
 }
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+	 Media Queries
+	 ========================================================================== */
 @media only screen and (max-width: 1240px) {
   
 }
@@ -563,8 +643,8 @@ article:after {
   }
 }
 /* ==========================================================================
-   Print styles
-   ========================================================================== */
+	 Print styles
+	 ========================================================================== */
 @media print {
   * {
     background: transparent !important;
@@ -585,8 +665,8 @@ article:after {
     content: " (" attr(title) ")";
   }
   /*
-       * Don't show links for images, or javascript/internal links
-       */
+  		 * Don't show links for images, or javascript/internal links
+  		 */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {

@@ -90,6 +90,7 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'frontBlog', 1280, 400, true);
     add_image_size( 'galAcc', 284, 284, true);
     add_image_size( 'singleBlog', 882, 320, true);
+    add_image_size( 'pageAgenda', 185, 128, true);
     
      // on vérifie que la fonction existe, puis on crée la nouvelle taille d'image. Le dernier paramètre à true indique qu'il faut rogner l'image pour qu'elle s'adapte aux dimensions
 }
@@ -164,7 +165,32 @@ if(!function_exists('create_post_type')){
 				'rewrite' => array('slug' => 'gallerie'),
 				'has_archive' => true
 			)
-		);			
+		);	
+		register_post_type( 'a-propos',
+			array(
+				'labels' => array(
+					'name' => __( 'A propos' ),
+				),
+				'public' => true,
+				'supports' => array('title','thumbnail'),
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'a-propos'),
+				'has_archive' => true
+			)
+		);	
+
+		register_post_type( 'comite',
+			array(
+				'labels' => array(
+					'name' => __( 'Le comité' ),
+				),
+				'public' => true,
+				'supports' => array('title','thumbnail','editor'),
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'comite'),
+				'has_archive' => true
+			)
+		);				
 
 	}
 };
